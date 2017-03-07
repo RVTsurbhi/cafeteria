@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+
 
 	<style>
 	body {
@@ -31,6 +33,9 @@
 		margin:0px 0 60pz 0;
 		color: #000066;
 	}
+	small{
+		opacity: 0;
+	}
 	.first{
 		background: url("http://economydecoded.com/wp-content/uploads/2015/10/31181558_2988.jpg");
 	}
@@ -44,7 +49,7 @@
 
   p{
     color:rbga(255,255,255,1);
-    background:linear-gradient(right,rgba(255,255,0,1),rgba(255,0,0,0.4));
+    background:yellow
 		background: -moz-linear-gradient(right,rgba(255,255,0,1),rgba(255,0,0,0.4));
 		background: -webkit-linear-gradient(right,rgba(255,255,0,1),rgba(255,0,0,0.4));
 		line-height: 28px;
@@ -59,13 +64,41 @@
 	.price{
 		float: right;
 	}
+	.show-description p{
+		height: 150px;
+	}
+	.show-description small{
+		opacity:1;
+	}
+	@media (max-width:500px) {
+  h1{
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2{
+    font-size: 20px;
+    margin:20px 0 30px 0;
+  }
+  div{
+    margin: 20px 12px 0 12px
+  }
+  p{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small{
+    font-size: 16px;
+  }
+}
+
 	</style>
 
 </head>
 <body>
 	<h1>EUPHORIA CAFETERIA</h1>
 	<h2>tricity's central area</h2>
-  <div class="first">
+  <div class="first show-description">
 	<p>Espresso <span class="price">$20</span> <br/>
 	<small>Espresso is a strong black coffee made by forcing steam through dark-roast aromatic coffee beans at high pressure in an espresso machine.
      A perfectly brewed espresso will have a thick, golden-brown crema (foam) on the surface.</small></p>
@@ -78,4 +111,6 @@
   <p>Cafe Latte <span class="price">$40</span><br/>
 	<small>Cafe Latte has more milk than a cappuccino. It is one part espresso with at least three to five parts ofsteamed hot milk with a small amount of froth on top.</small></p>
 </div>
+
+
 </body>
