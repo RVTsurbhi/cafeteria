@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
-<head>
-	<link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
-
+  <head>
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<script src="http//dash.ga.co/assets/jquery.js"></script>
 
 	<style>
+
 	body {
 	 font-family: 'Bree Serif', serif;
 	 margin: 0 auto;
@@ -14,21 +15,20 @@
   div{
     height: 200px;
     background-size:cover;
-    background-position: center;
 		position:relative;
 		margin: 40px 0px 0px 0px;
 		border-radius: 12px;
   }
   h1{
     text-align: center;
-		font-family: 'Lobster', cursive;
+	  font-family: 'Monoton', cursive;
 		font-size:60px;
 		margin: 50px 0 0 0;
 		color: #2E0221;
   }
 	h2{
 		text-align: center;
-	  font-family: 'Chewy', cursive;
+	  font-family: 'Cookie', cursive;
 		font-size: 30px;
 		margin:0px 0 60pz 0;
 		color: #000066;
@@ -49,7 +49,8 @@
 
   p{
     color:rbga(255,255,255,1);
-    background:yellow
+    background:yellow;
+		background:linear-gradient(right,rgba(255,255,0,1),rgba(255,0,0,0.4));
 		background: -moz-linear-gradient(right,rgba(255,255,0,1),rgba(255,0,0,0.4));
 		background: -webkit-linear-gradient(right,rgba(255,255,0,1),rgba(255,0,0,0.4));
 		line-height: 28px;
@@ -58,14 +59,19 @@
 		position: absolute;
 		bottom: 0;
 		margin: 0;
+		height:32px;
 
+	}
 
-  }
 	.price{
 		float: right;
 	}
+	.price:hover{
+		color:blue;
+		font-size:22px;
+	}
 	.show-description p{
-		height: 150px;
+		height:100px;
 	}
 	.show-description small{
 		opacity:1;
@@ -81,7 +87,7 @@
     margin:20px 0 30px 0;
   }
   div{
-    margin: 20px 12px 0 12px
+    margin: 20px 12px 0 12px;
   }
   p{
     font-size: 20px;
@@ -98,7 +104,7 @@
 <body>
 	<h1>EUPHORIA CAFETERIA</h1>
 	<h2>tricity's central area</h2>
-  <div class="first show-description">
+  <div class="first">
 	<p>Espresso <span class="price">$20</span> <br/>
 	<small>Espresso is a strong black coffee made by forcing steam through dark-roast aromatic coffee beans at high pressure in an espresso machine.
      A perfectly brewed espresso will have a thick, golden-brown crema (foam) on the surface.</small></p>
@@ -112,5 +118,10 @@
 	<small>Cafe Latte has more milk than a cappuccino. It is one part espresso with at least three to five parts ofsteamed hot milk with a small amount of froth on top.</small></p>
 </div>
 
+<script>
+$('div').on('click', function(){
+	$(this).toggleclass('show-description');
+});
+</script>
 
 </body>
